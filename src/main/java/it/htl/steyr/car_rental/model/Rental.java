@@ -32,5 +32,23 @@ public class Rental {
         return id;
     }
 
+    public void setActive(int active) {
+        this.active = active;
+    }
 
+    public void setRental_date(Date rental_date) {
+        this.rental_date = rental_date;
+    }
+
+    public void setReturn_date(Date return_date) {
+        this.return_date = return_date;
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
 }

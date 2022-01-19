@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="375.0" prefWidth="438.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.htl.steyr.car_rental.controller.RentalController">
    <children>
-      <ListView fx:id="accountsListView" layoutX="14.0" layoutY="22.0" prefHeight="461.0" prefWidth="410.0" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="22.0" />
+      <ListView fx:id="rentalListView" layoutX="14.0" layoutY="22.0" prefHeight="461.0" prefWidth="410.0" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="22.0" />
       <Button layoutX="73.0" layoutY="346.0" mnemonicParsing="false" onAction="#removeRentalClicked" text="Remove" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="96.0" />
       <Button layoutX="140.0" layoutY="346.0" mnemonicParsing="false" onAction="#cancelClicked" text="Abbrechen" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="14.0" />
    </children>

@@ -1,25 +1,13 @@
 package it.htl.steyr.car_rental.controller;
 
-import it.htl.steyr.car_rental.IDialogConfirmedSubscriber;
-import it.htl.steyr.car_rental.model.Car;
-import it.htl.steyr.car_rental.model.CarRepository;
-import it.htl.steyr.car_rental.model.Client;
-import it.htl.steyr.car_rental.model.ClientRepository;
+import it.htl.steyr.car_rental.model.*;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.io.IOException;
+import java.sql.Date;
 
 public class Controller {
 
@@ -30,7 +18,6 @@ public class Controller {
 
     @Autowired
     CarRepository carRepository;
-
     @Autowired
     ClientRepository clientRepository;
 
@@ -40,6 +27,12 @@ public class Controller {
     }
 
     public void saveRentalClicked(ActionEvent actionEvent) {
+        Rental newRental = new Rental();
+        newRental.setRental_date(java.sql.Date.valueOf(startRental.getValue()));
+        newRental.setReturn_date(java.sql.Date.valueOf(stopRental.getValue()));
+        newRental.setActive(1);
+        newRental.setCar(carSelection.getSelectionModel().getSelectedItem());
+        newRental.setClient(clientSelection.getSelectionModel().getSelectedItem());
     }
 
     public void editClient(ActionEvent actionEvent) {
@@ -62,5 +55,8 @@ public class Controller {
     public void loadFxml(String path, String title){
         MyFXMLLoader loader = new MyFXMLLoader();
         loader.loadFXML(path, title);
+    }
+
+    public void ListViewClicked(MouseEvent mouseEvent) {
     }
 }

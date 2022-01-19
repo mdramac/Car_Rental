@@ -35,7 +35,7 @@ public class Client {
     }
 
 
-    @Id
+
     public String getIban() {
         return iban;
     }
@@ -48,4 +48,8 @@ public class Client {
         return name;
     }
 
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

@@ -24,11 +24,33 @@ public class Car {
     private String modell;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "brand")
+    @JoinColumn(name = "brand_id")
     private Brand brand;
 
     @Column(name = "daily_rate", nullable = false)
     private long daily_rate;
 
+    public String getModell() {
+        return modell;
+    }
 
+    public Brand getBrand() {
+        return brand;
+    }
+
+    public long getDaily_rate() {
+        return daily_rate;
+    }
+
+    public void setModell(String modell) {
+        this.modell = modell;
+    }
+
+    public void setBrand(Brand brand) {
+        this.brand = brand;
+    }
+
+    public void setDaily_rate(long daily_rate) {
+        this.daily_rate = daily_rate;
+    }
 }

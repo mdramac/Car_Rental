@@ -12,7 +12,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class JavaFxApplication extends Application {
     private static final String APPLICATION_TITLE = "Hello World";
 
-    private ConfigurableApplicationContext springContext;
+    private static ConfigurableApplicationContext springContext;
     private Parent root;
 
     @Override
@@ -28,7 +28,7 @@ public class JavaFxApplication extends Application {
                         sources(CarRentalApplication.class).
                         run(args);
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("scene.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("controller/scene.fxml"));
 
         /**
          * Set spring as the factory (when controllers were generated).
@@ -43,10 +43,15 @@ public class JavaFxApplication extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle(APPLICATION_TITLE);
-        Scene scene = new Scene(root, 800, 600);
+        Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+
+    public static ConfigurableApplicationContext getSpringContext() {
+        return springContext;
+    }
+
 
     @Override
     public void stop() {
