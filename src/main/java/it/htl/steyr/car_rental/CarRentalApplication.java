@@ -1,5 +1,6 @@
 package it.htl.steyr.car_rental;
 
+import javafx.application.Application;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CarRentalApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CarRentalApplication.class, args);
+        Application.launch(JavaFxApplication.class, args);
     }
+
 
 }

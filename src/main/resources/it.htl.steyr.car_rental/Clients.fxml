@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="391.0" prefWidth="323.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.htl.steyr.car_rental.controller.ClientsController">
+   <children>
+      <ListView fx:id="customerListView" layoutX="14.0" layoutY="175.0" prefHeight="149.0" prefWidth="200.0" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="175.0" />
+      <Button layoutX="73.0" layoutY="346.0" mnemonicParsing="false" onAction="#removeCustomerClicked" text="Remove" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="96.0" />
+      <Button layoutX="140.0" layoutY="346.0" mnemonicParsing="false" onAction="#cancelClicked" text="Abbrechen" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="14.0" />
+      <Button layoutX="14.0" layoutY="346.0" mnemonicParsing="false" onAction="#editCustomerClicked" prefHeight="25.0" prefWidth="48.0" text="Edit" />
+      <Label layoutX="11.0" layoutY="30.0" text="Firstname:" />
+      <Label layoutX="13.0" layoutY="64.0" text="Lastname" />
+      <TextField fx:id="firstnameTextfield" layoutX="78.0" layoutY="26.0" />
+      <TextField fx:id="lastnameTextfield" layoutX="78.0" layoutY="60.0" />
+      <Button fx:id="newCustomerClicked" layoutX="227.0" layoutY="110.0" mnemonicParsing="false" text="New" />
+   </children>
+</AnchorPane>
